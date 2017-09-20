@@ -1,0 +1,122 @@
+﻿body{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(/image/OJo.jpg);
+    background-attachment: fixed;
+
+}
+
+.startMenu, .myWork{
+    background-color: #009900;
+    position: relative;
+    top: 40px;
+    text-align: center;
+    margin: 10px;
+    height: 40px;
+}
+
+.myWork{
+    top: 20px;
+}
+
+.title{
+    color: white;
+}
+
+.job{
+    padding-top: 10px;
+    }
+
+#ourmenu{
+    display: table;
+    position: relative;
+    top: 30px;
+    border-spacing: 15px;
+}
+
+#tableRow{
+    display: table-row;
+}
+
+#workDay{
+    font-size: 17px;
+    color: #006600;
+    line-height: 40px;
+}
+
+#tableRow section{
+    display: table-cell;
+    border: 2px solid #009900;
+    padding: 15px;
+}
+
+#button, #newChoise{
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 180px;
+    cursor: pointer;
+}
+
+.pasta_riso{
+    padding: 5px;
+    border: 2px dashed #009900;
+    border-radius: 5px;
+    margin: 10px;
+    line-height: 25px;
+}
+
+.special{
+    font-size: 20px;
+    font-weight: bold;
+    color: #cc2900;
+    padding-left: 10px;
+    line-height: 40px;
+    border-bottom: none;
+}
+
+input.food{
+    color: #800000;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+h1, h2{
+    font-weight: bolder;
+    color: #cc2900;
+}
+
+p{
+    font-size: 17px;
+    color: #006600;
+}
+
+th{
+    color: #006600;
+}
+
+td{
+    color: #800000;
+}
+
+th, td{
+    text-align: left;
+    font-size: 17px;
+}
+
+.allMenu{
+    width: 640px;
+}
+
+
+label{
+    color: #006600;
+    font-size: 17px;
+}
+
+#newChoise{
+    top: 30px;
+}
+
+.alertMenu, .alertQuantity{
+    display: none;
+}
