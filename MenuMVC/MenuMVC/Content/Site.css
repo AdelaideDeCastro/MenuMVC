@@ -120,3 +120,31 @@ label{
 .alertMenu, .alertQuantity{
     display: none;
 }
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-draggable.ui-resizable {
+    background-image: url('../image/dialogFrame.gif');
+}
+
+ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle {
+    
+}
+
+.ui-dialog-titlebar-close {
+    background-image: url('../image/esc.jpg');
+    width: 25px;
+    height: 25px;
+}
+
+.ui-dialog-content.ui-widget-content {
+    background-image: url('../image/dialogFrame.gif');
+}
+
+p.alertdialog {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.dialogPopup {
+    display: none;
+}

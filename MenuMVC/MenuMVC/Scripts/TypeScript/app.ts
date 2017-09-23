@@ -1,4 +1,5 @@
 ﻿/// <reference path="../typings/jquery/jquery.d.ts" />
+/// <reference path="../typings/jqueryui/jqueryui.d.ts" />
 
 window.onload = function () {
     validationCheckbox();
@@ -8,15 +9,30 @@ window.onload = function () {
 
         var validation = checkValidation();
         if (validation) {
-            AnimateRotate(360, 1000);
-            randomMenu();
-            insertLunch();
+            animateRotate(360, 1000);
+            setTimeout(function () {
+                    var lengthOptions = $("#workDay li").length;
+                    var i: number = 0;
+                    do {
+                        var $randomList = $("#workDay li").eq(Math.floor(Math.random() * lengthOptions));
+                        $("#result td").eq(i).text($randomList.text());
+                        i++;
+                    } while (i < 5);
+                },
+                1100); 
+            setTimeout(function () {
+                    $("#result td").eq(5)
+                        .text($('#lunch input:checked').eq(0).val() + " and " + $('#dinner input:checked').eq(0).val());
+                    $("#result td").eq(6)
+                        .text($('#lunch input:checked').eq(1).val() + " and " + $('#dinner input:checked').eq(1).val());
+                },
+                1100);
         } else
             return false;
     })
 };
 
-function AnimateRotate(angle: number, duration: number) {
+function animateRotate(angle: number, duration: number) {
 
     var $elem = $('#button');
 
@@ -31,35 +47,35 @@ function AnimateRotate(angle: number, duration: number) {
     });
 }
 
-function randomMenu() {
-    var lengthOptions = $("#workDay li").length;
-    var i: number = 0;
-    do {
-        var $randomList = $("#workDay li").eq(Math.floor(Math.random() * lengthOptions));
-        $("#result td").eq(i).text($randomList.text());
-        i++;
-    }
-    while (i < 5);
-}
+//setInterval(function () {
+//        var lengthOptions = $("#workDay li").length;
+//        var i: number = 0;
+//        do {
+//            var $randomList = $("#workDay li").eq(Math.floor(Math.random() * lengthOptions));
+//            $("#result td").eq(i).text($randomList.text());
+//            i++;
+//        } while (i < 5);
+//    },
+//    2000);
 
 function validationCheckbox() {
     $('#lunch input, #dinner input').on('change', function (evt) {
-        if ($(this).siblings(':checked').length >= 2) {
+        if ($("#lunch input:checked").length > 2) {
             this.checked = false;
-            $('.alertMenu').css('display', 'block');
-            //alert("Sorry, you can check only two meals"); //aggiungere messaggio per l'utente
+            $('#alertLunch').dialog();
+        }
+        if ($("#dinner input:checked").length > 2) {
+            this.checked = false;
+            $('#alertDinner').dialog();
         }
     });
 };
 
-function insertLunch() {
-    $("#result td").eq(5).text($('#lunch input:checked').eq(0).val() + " and " + $('#dinner input:checked').eq(0).val());
-    $("#result td").eq(6).text($('#lunch input:checked').eq(1).val() + " and " + $('#dinner input:checked').eq(1).val());
-}
+
 
 function checkValidation() {
-    if ($('#lunch input, #dinner input').siblings(':checked').length != 4) {
-        $('.alertQuantity').css('display', 'block'); /*Select two meals*/
+    if ($('#lunch input:checked, #dinner input:checked').length != 4) {
+        $('#alertQuantity').dialog();
         return false;
     } else
         return true;

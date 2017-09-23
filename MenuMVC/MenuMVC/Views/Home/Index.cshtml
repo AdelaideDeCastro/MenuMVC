@@ -60,56 +60,33 @@
         </section>
         <section id="somethingSpecial" class="allMenu">
                 <h2>Choose your special weekend dishes</h2>
-            <div class="alertMenu">
-                <p><strong>Sorry</strong>, you can check only two meals.</p>
-            </div>
-            <div class="alertQuantity">
-                <p>Select you can check only two meals.</p>
-            </div>
                 <form id="primo" class="choiceWeekEnd">
                     <fieldset class="pasta_riso" id="lunch">
                         <legend class="special">Special Lunch</legend>
-                        <label for="checkCarbonara">
-                            <input type="checkbox" name="lunch" value="Carbonara" class="food" />Carbonara<br />
-                        </label><br />
-                        <label for="checkAmatriciana">
-                            <input type="checkbox" name="lunch" value="Amatricina" class="food" />Amatricina<br />
-                        </label><br />
-                        <label for="checkGnocchi">
-                            <input type="checkbox" name="lunch" value="Gnocchi" class="food" />Gnocchi<br />
-                        </label><br />
-                        <label for="checkFettucine">
-                            <input type="checkbox" name="lunch" value="Fettuccine" class="food" />Fettuccine<br>
-                        </label><br />
-                        <label for="checkRisottoZ">
-                            <input type="checkbox" name="lunch" value="Rissotto zafferano" class="food" />Rissotto zafferano<br />
-                        </label><br />
-                        <label for="checkRisottoPF">
-                            <input type="checkbox" name="lunch" value="Risotto pancetta e funghi" class="food" />Risotto pancetta e funghi<br />
-                        </label><br />
-                        <label for="checkRisottoPA">
-                            <input type="checkbox" name="lunch" value="Risotto pancetta e asparagi" class="food" />Risotto pancetta e asparagi<br />
-                        </label><br />
+                        
+                            <input type="checkbox" name="lunch" value="Carbonara" class="food" /><label for="checkCarbonara" class="pippo">Carbonara</label><br />
+                        
+                            <input type="checkbox" name="lunch" value="Amatricina" class="food" /><label for="checkAmatriciana" class="pippo">Amatricina</label><br />
+                        
+                            <input type="checkbox" name="lunch" value="Gnocchi" class="food" /><label for="checkGnocchi" class="pippo">Gnocchi</label><br />
+                        
+                            <input type="checkbox" name="lunch" value="Fettuccine" class="food" /><label for="checkFettucine" class="pippo">Fettuccine</label><br />
+                        
+                            <input type="checkbox" name="lunch" value="Rissotto zafferano" class="food" /><label for="checkRisottoZ" class="pippo">Rissotto zafferano</label><br />
+                        
+                            <input type="checkbox" name="lunch" value="Risotto pancetta e funghi" class="food" /><label for="checkRisottoPF" class="pippo">Risotto pancetta e funghi</label><br />
+                        
+                            <input type="checkbox" name="lunch" value="Risotto pancetta e asparagi" class="food" /><label for="checkRisottoPA" class="pippo">Risotto pancetta e asparagi</label><br />
                     </fieldset>
                 </form>
                 <form id="secondo" class="choiceWeekEnd">
                     <fieldset class="pasta_riso" id="dinner">
-                        <legend class="special">Special Dinner</legend>
-                        <label for="checkPulledPork"><br />
-                            <input type="checkbox" name="dinner" value="Pulled Pork" class="food dinner" />Pulled Pork
-                        </label><br />
-                        <label for="checkPizza">
-                            <input type="checkbox" name="dinner" value="Pizza" class="food" />Pizza
-                        </label><br />
-                        <label for="checkKebab">
-                            <input type="checkbox" name="dinner" value="Kebab" class="food" />Kebab
-                        </label><br />
-                        <label for="checkHamburger">
-                            <input type="checkbox" name="dinner" value="Hamburger" class="food" />Hamburger
-                        </label><br />
-                        <label for="checkHotDog">
-                            <input type="checkbox" name="dinner" value="Hot Dog" class="food" />Hot Dog
-                        </label><br />
+                        <legend class="special">Special Dinner</legend>  
+                            <input type="checkbox" name="dinner" value="Pulled Pork" class="food" /><label for="checkPulledPork" class="pippo">Pulled Pork</label><br />
+                            <input type="checkbox" name="dinner" value="Pizza" class="food" /><label for="checkPizza" class="pippo">Pizza</label><br />
+                            <input type="checkbox" name="dinner" value="Kebab" class="food" /><label for="checkKebab" class="pippo">Kebab</label><br />
+                            <input type="checkbox" name="dinner" value="Hamburger" class="food" /><label for="checkHamburger" class="pippo">Hamburger</label><br />                      
+                            <input type="checkbox" name="dinner" value="Hot Dog" class="food" /><label for="checkHotDog" class="pippo">Hot Dog</label><br />
                     </fieldset>
                 </form>
         </section>
@@ -118,6 +95,18 @@
 <footer class="myWork">
     <p class="title job">It is my first work...</p>
 </footer>
+<div id="alertLunch" class="dialogPopup">
+    <p class="alertdialog"><strong>Sorry!</strong><br/>
+    You can select only two lunch dishes.</p>
+</div>
+<div id="alertDinner" class="dialogPopup">
+    <p class="alertdialog"><strong>Sorry!</strong><br />
+    You can select only two dinner dishes.</p>
+</div>
+<div id="alertQuantity" class="dialogPopup">
+    <p class="alertdialog">You can select just four special dishes.</p>
+</div>
+
 @*<script src="JS/jquery-3.2.1.js"></script>
 <script src="JS/pippo.js"></script>*@
 
