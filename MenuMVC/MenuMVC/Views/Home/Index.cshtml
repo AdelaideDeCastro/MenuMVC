@@ -1,4 +1,7 @@
-﻿@{
+﻿@using MenuMVC.Models.Entities
+@model IEnumerable<WeekDishe>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -9,16 +12,12 @@
     <div id="tableRow">
         <section id="menu" class="allMenu">
                 <h2>Your <strong>Dinner Choices</strong> from Monday to Friday</h2>
-                <ul id="workDay">
-                    <li>Salsicce e lenticchie</li>
-                    <li>Pesce e fagiolini/peperoni/patare/funghi/verza/cappuccio</li>
-                    <li>Pollo e fagiolini/peperoni/patare/funghi/verza/cappuccio</li>
-                    <li>Polpette e fagiolini/peperoni/patare/funghi/verza/cappuccio</li>
-                    <li>Frittata e fagiolini/peperoni/patare/funghi/verza/cappuccio</li>
-                    <li>Straccetti e fagiolini/peperoni/patare/funghi/verza/cappuccio</li>
-                    <li>Bistecca e fagiolini/peperoni/patare/funghi/verza/cappuccio</li>
-                    <li>Involtini di verza e fagiolini/peperoni/patare/funghi/verza/cappuccio</li>
-                </ul>
+            <ul id="workDay">
+                @foreach (var p in Model)
+                {
+                    <li>@p.weekDishes</li>
+                }
+            </ul>
         </section>
         <section id="fortune" class="allMenu">
                 <h2>Prey the goddess Fortuna</h2>
