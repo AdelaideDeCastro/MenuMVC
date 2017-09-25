@@ -4,21 +4,22 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MenuMVC.Models.Concrete;
+using MenuMVC.Models.ViewModels;
 
 namespace MenuMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private EFWeekDisheRepository repository;
+        private IndexRepository repository;
 
         public HomeController()
         {
-            this.repository = new EFWeekDisheRepository();
+            this.repository = new IndexRepository();
         }
 
         public ActionResult Index()
         {
-            return View(repository.WeekDishes);
+            return View(repository.index);
         }
 
         public ActionResult About()

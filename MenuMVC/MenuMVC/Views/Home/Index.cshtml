@@ -1,5 +1,5 @@
-﻿@using MenuMVC.Models.Entities
-@model IEnumerable<WeekDishe>
+﻿@using MenuMVC.Models.Entities.ViewModel
+@model Index
 
 @{
     ViewBag.Title = "Home Page";
@@ -13,7 +13,7 @@
         <section id="menu" class="allMenu">
                 <h2>Your <strong>Dinner Choices</strong> from Monday to Friday</h2>
             <ul id="workDay">
-                @foreach (var p in Model)
+                @foreach (var p in Model.weekDishes)
                 {
                     <li>@p.weekDishes</li>
                 }
@@ -62,20 +62,11 @@
                 <form id="primo" class="choiceWeekEnd">
                     <fieldset class="pasta_riso" id="lunch">
                         <legend class="special">Special Lunch</legend>
-                        
-                            <input type="checkbox" name="lunch" value="Carbonara" class="food" /><label for="checkCarbonara" class="pippo">Carbonara</label><br />
-                        
-                            <input type="checkbox" name="lunch" value="Amatricina" class="food" /><label for="checkAmatriciana" class="pippo">Amatricina</label><br />
-                        
-                            <input type="checkbox" name="lunch" value="Gnocchi" class="food" /><label for="checkGnocchi" class="pippo">Gnocchi</label><br />
-                        
-                            <input type="checkbox" name="lunch" value="Fettuccine" class="food" /><label for="checkFettucine" class="pippo">Fettuccine</label><br />
-                        
-                            <input type="checkbox" name="lunch" value="Rissotto zafferano" class="food" /><label for="checkRisottoZ" class="pippo">Rissotto zafferano</label><br />
-                        
-                            <input type="checkbox" name="lunch" value="Risotto pancetta e funghi" class="food" /><label for="checkRisottoPF" class="pippo">Risotto pancetta e funghi</label><br />
-                        
-                            <input type="checkbox" name="lunch" value="Risotto pancetta e asparagi" class="food" /><label for="checkRisottoPA" class="pippo">Risotto pancetta e asparagi</label><br />
+                        @foreach (var p in Model.specialLunches)
+                        {
+                            <input type="checkbox" name="lunch" value="@p.specialLunches" class="food" id="@p.specialLunches"/><label for="@p.specialLunches" class="pippo">@p.specialLunches</label><br />
+                }
+                            
                     </fieldset>
                 </form>
                 <form id="secondo" class="choiceWeekEnd">
