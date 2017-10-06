@@ -47,17 +47,6 @@ function animateRotate(angle: number, duration: number) {
     });
 }
 
-//setInterval(function () {
-//        var lengthOptions = $("#workDay li").length;
-//        var i: number = 0;
-//        do {
-//            var $randomList = $("#workDay li").eq(Math.floor(Math.random() * lengthOptions));
-//            $("#result td").eq(i).text($randomList.text());
-//            i++;
-//        } while (i < 5);
-//    },
-//    2000);
-
 function validationCheckbox() {
     $('#lunch input, #dinner input').on('change', function (evt) {
         if ($("#lunch input:checked").length > 2) {

@@ -17,7 +17,7 @@ namespace MenuMVC.Models.ViewModels
         {
             get
             {
-                var index = new Index(context.SpecialLunches, context.WeekDishes);
+                var index = new Index(context.SpecialDinners, context.SpecialLunches, context.WeekDishes);
                 return index;
             }
         }

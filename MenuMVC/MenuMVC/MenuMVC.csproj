@@ -221,12 +221,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Abstract\ISpecialDinnerRepository.cs" />
     <Compile Include="Models\Abstract\ISpecialLunchRepository.cs" />
     <Compile Include="Models\Abstract\IWeekDisheRepository.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Concrete\EFSpecialDinnerRepository.cs" />
     <Compile Include="Models\Concrete\EFSpecialLunchRepository.cs" />
     <Compile Include="Models\Concrete\EFWeekDisheRepository.cs" />
     <Compile Include="Models\Concrete\EFDbContext.cs" />
+    <Compile Include="Models\Entities\SpecialDinner.cs" />
     <Compile Include="Models\Entities\SpecialLunch.cs" />
     <Compile Include="Models\Entities\ViewModel\Index.cs" />
     <Compile Include="Models\Entities\WeekDishe.cs" />
@@ -280,7 +283,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

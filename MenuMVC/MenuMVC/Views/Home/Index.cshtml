@@ -71,12 +71,11 @@
                 </form>
                 <form id="secondo" class="choiceWeekEnd">
                     <fieldset class="pasta_riso" id="dinner">
-                        <legend class="special">Special Dinner</legend>  
-                            <input type="checkbox" name="dinner" value="Pulled Pork" class="food" /><label for="checkPulledPork" class="pippo">Pulled Pork</label><br />
-                            <input type="checkbox" name="dinner" value="Pizza" class="food" /><label for="checkPizza" class="pippo">Pizza</label><br />
-                            <input type="checkbox" name="dinner" value="Kebab" class="food" /><label for="checkKebab" class="pippo">Kebab</label><br />
-                            <input type="checkbox" name="dinner" value="Hamburger" class="food" /><label for="checkHamburger" class="pippo">Hamburger</label><br />                      
-                            <input type="checkbox" name="dinner" value="Hot Dog" class="food" /><label for="checkHotDog" class="pippo">Hot Dog</label><br />
+                        <legend class="special">Special Dinner</legend> 
+                        @foreach (var p in Model.specialDinners)
+                        {
+                            <input type="checkbox" name="dinner" value="@p.specialDinners" class="food" id="@p.specialDinners"/><label for="@p.specialDinners" class="pippo">@p.specialDinners</label><br /> 
+                        } 
                     </fieldset>
                 </form>
         </section>

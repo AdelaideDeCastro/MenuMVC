@@ -125,9 +125,9 @@ label{
     background-image: url('../image/dialogFrame.gif');
 }
 
-ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle {
+/*ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle {
     
-}
+}*/
 
 .ui-dialog-titlebar-close {
     background-image: url('../image/esc.jpg');
