@@ -3,8 +3,8 @@ using MenuMVC.Models.Entities;
 
 namespace MenuMVC.Models.Abstract
 {
-    interface ISpecialDinnerRepository
+    interface IVegetableRepository
     {
-        IEnumerable<SpecialDinner> SpecialDinners { get; }
+        IEnumerable<Vegetable> Vegetables { get; }
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 using MenuMVC.Models.Entities;
 
 namespace MenuMVC.Models.Concrete
@@ -11,5 +7,6 @@ namespace MenuMVC.Models.Concrete
         public DbSet<WeekDishe> WeekDishes { get; set; }
         public DbSet<SpecialLunch> SpecialLunches { get; set; }
         public DbSet<SpecialDinner> SpecialDinners { get; set; }
+        public DbSet<Vegetable> Vegetables { get; set; }
     }
 }

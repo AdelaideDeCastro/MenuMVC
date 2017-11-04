@@ -223,15 +223,18 @@
     </Compile>
     <Compile Include="Models\Abstract\ISpecialDinnerRepository.cs" />
     <Compile Include="Models\Abstract\ISpecialLunchRepository.cs" />
+    <Compile Include="Models\Abstract\IVegetableRepository.cs" />
     <Compile Include="Models\Abstract\IWeekDisheRepository.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Concrete\EFSpecialDinnerRepository.cs" />
     <Compile Include="Models\Concrete\EFSpecialLunchRepository.cs" />
     <Compile Include="Models\Concrete\EFWeekDisheRepository.cs" />
     <Compile Include="Models\Concrete\EFDbContext.cs" />
+    <Compile Include="Models\Concrete\EFVegetableRepository.cs" />
     <Compile Include="Models\Entities\SpecialDinner.cs" />
     <Compile Include="Models\Entities\SpecialLunch.cs" />
     <Compile Include="Models\Entities\ViewModel\Index.cs" />
+    <Compile Include="Models\Entities\Vegetable.cs" />
     <Compile Include="Models\Entities\WeekDishe.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -240,10 +243,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -260,13 +259,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.js" />

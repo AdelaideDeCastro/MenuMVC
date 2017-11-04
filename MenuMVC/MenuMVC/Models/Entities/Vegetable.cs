@@ -1,8 +1,8 @@
 ﻿namespace MenuMVC.Models.Entities
 {
-    public class SpecialDinner
+    public class Vegetable
     {
         public int Id { get; set; }
-        public string specialDinners { get; set; }
+        public string accompained { get; set; }
     }
 }

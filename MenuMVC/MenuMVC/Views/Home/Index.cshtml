@@ -11,73 +11,88 @@
 <div id="ourmenu">
     <div id="tableRow">
         <section id="menu" class="allMenu">
-                <h2>Your <strong>Dinner Choices</strong> from Monday to Friday</h2>
+            <h2>Your <strong>Dinner Choices</strong> from Monday to Friday</h2>
             <ul id="workDay">
                 @foreach (var p in Model.weekDishes)
                 {
                     <li>@p.weekDishes</li>
                 }
             </ul>
+            <p>
+                Every dishe can be accompanied by:
+
+                @{int i = 0;
+                    int c = Model.vegetables.Count();}
+                @foreach (var d in Model.vegetables)
+                {
+                    i++;
+                    @d.accompained;
+                    if (i != c)
+                    {
+                        @:,
+                        }
+                }
+            </p>
         </section>
         <section id="fortune" class="allMenu">
-                <h2>Prey the goddess Fortuna</h2>
-                <p>Choise your Weekly Menu to be <strong>Happy!!!</strong></p>
-                <img src="~/image/piatto.png" id="button" />
-                <div id="showMenu">
-                    <table id="result">
-                        <tr>
-                            <th>Monday:</th>
-                            <td id="monday"></td>
-                        </tr>
-                        <tr>
-                            <th>Tuesday:</th>
-                            <td id="tuesday"></td>
-                        </tr>
-                        <tr>
-                            <th>Wednesday:</th>
-                            <td id="wednesday"></td>
-                        </tr>
-                        <tr>
-                            <th>Thursday:</th>
-                            <td id="thursday"></td>
-                        </tr>
-                        <tr>
-                            <th>Friday:</th>
-                            <td id="friday"></td>
-                        </tr>
-                        <tr>
-                            <th>Saturday:</th>
-                            <td id="saturday"></td>
-                        </tr>
-                        <tr>
-                            <th>Sunday</th>
-                            <td id="sunday"></td>
-                        </tr>
-                    </table>
-                </div>
-                <img src="~/image/uova.jpg" id="newChoise" />
+            <h2>Prey the goddess Fortuna</h2>
+            <p>Choise your Weekly Menu to be <strong>Happy!!!</strong></p>
+            <img src="~/image/piatto.png" id="button" />
+            <div id="showMenu">
+                <table id="result">
+                    <tr>
+                        <th>Monday:</th>
+                        <td id="monday"></td>
+                    </tr>
+                    <tr>
+                        <th>Tuesday:</th>
+                        <td id="tuesday"></td>
+                    </tr>
+                    <tr>
+                        <th>Wednesday:</th>
+                        <td id="wednesday"></td>
+                    </tr>
+                    <tr>
+                        <th>Thursday:</th>
+                        <td id="thursday"></td>
+                    </tr>
+                    <tr>
+                        <th>Friday:</th>
+                        <td id="friday"></td>
+                    </tr>
+                    <tr>
+                        <th>Saturday:</th>
+                        <td id="saturday"></td>
+                    </tr>
+                    <tr>
+                        <th>Sunday</th>
+                        <td id="sunday"></td>
+                    </tr>
+                </table>
+            </div>
+            <img src="~/image/uova.jpg" id="newChoise" />
         </section>
         <section id="somethingSpecial" class="allMenu">
-                <h2>Choose your special weekend dishes</h2>
-                <form id="primo" class="choiceWeekEnd">
-                    <fieldset class="pasta_riso" id="lunch">
-                        <legend class="special">Special Lunch</legend>
-                        @foreach (var p in Model.specialLunches)
-                        {
-                            <input type="checkbox" name="lunch" value="@p.specialLunches" class="food" id="@p.specialLunches"/><label for="@p.specialLunches" class="pippo">@p.specialLunches</label><br />
-                }
-                            
-                    </fieldset>
-                </form>
-                <form id="secondo" class="choiceWeekEnd">
-                    <fieldset class="pasta_riso" id="dinner">
-                        <legend class="special">Special Dinner</legend> 
-                        @foreach (var p in Model.specialDinners)
-                        {
-                            <input type="checkbox" name="dinner" value="@p.specialDinners" class="food" id="@p.specialDinners"/><label for="@p.specialDinners" class="pippo">@p.specialDinners</label><br /> 
-                        } 
-                    </fieldset>
-                </form>
+            <h2>Choose your special weekend dishes</h2>
+            <form id="primo" class="choiceWeekEnd">
+                <fieldset class="pasta_riso" id="lunch">
+                    <legend class="special">Special Lunch</legend>
+                    @foreach (var p in Model.specialLunches)
+                    {
+                        <input type="checkbox" name="lunch" value="@p.specialLunches" class="food" id="@p.specialLunches" /><label for="@p.specialLunches" class="pippo">@p.specialLunches</label><br />
+                    }
+
+                </fieldset>
+            </form>
+            <form id="secondo" class="choiceWeekEnd">
+                <fieldset class="pasta_riso" id="dinner">
+                    <legend class="special">Special Dinner</legend>
+                    @foreach (var p in Model.specialDinners)
+                    {
+                        <input type="checkbox" name="dinner" value="@p.specialDinners" class="food" id="@p.specialDinners" /><label for="@p.specialDinners" class="pippo">@p.specialDinners</label><br />
+                    }
+                </fieldset>
+            </form>
         </section>
     </div>
 </div>
@@ -85,19 +100,23 @@
     <p class="title job">It is my first work...</p>
 </footer>
 <div id="alertLunch" class="dialogPopup">
-    <p class="alertdialog"><strong>Sorry!</strong><br/>
-    You can select only two lunch dishes.</p>
+    <p class="alertdialog">
+        <strong>Sorry!</strong><br />
+        You can select only two lunch dishes.
+    </p>
 </div>
 <div id="alertDinner" class="dialogPopup">
-    <p class="alertdialog"><strong>Sorry!</strong><br />
-    You can select only two dinner dishes.</p>
+    <p class="alertdialog">
+        <strong>Sorry!</strong><br />
+        You can select only two dinner dishes.
+    </p>
 </div>
 <div id="alertQuantity" class="dialogPopup">
     <p class="alertdialog">You can select just four special dishes.</p>
 </div>
 
 @*<script src="JS/jquery-3.2.1.js"></script>
-<script src="JS/pippo.js"></script>*@
+    <script src="JS/pippo.js"></script>*@
 
 @section scripts{
     <script src="~/Scripts/TypeScript/app.js"></script>
