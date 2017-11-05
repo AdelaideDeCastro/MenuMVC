@@ -18,21 +18,23 @@
                     <li>@p.weekDishes</li>
                 }
             </ul>
-            <p>
-                Every dishe can be accompanied by:
-
-                @{int i = 0;
-                    int c = Model.vegetables.Count();}
-                @foreach (var d in Model.vegetables)
-                {
-                    i++;
-                    @d.accompained;
-                    if (i != c)
+            <div id="accompVegetable">
+                Every dishe can be accompanied by: 
+                    @{int i = 0;
+                        int c = Model.vegetables.Count();}
+                    @foreach (var d in Model.vegetables)
                     {
-                        @:,
+                        <p >
+                      
+                       @d.accompained
+                        @if (i != c)
+                        {
+                            i++;
+                            @:,
                         }
-                }
-            </p>
+                            </p>
+                    }
+            </div>
         </section>
         <section id="fortune" class="allMenu">
             <h2>Prey the goddess Fortuna</h2>

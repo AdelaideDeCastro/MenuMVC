@@ -11,12 +11,19 @@ window.onload = function () {
         if (validation) {
             animateRotate(360, 1000);
             setTimeout(function () {
-                    var lengthOptions = $("#workDay li").length;
-                    var i: number = 0;
-                    do {
+                var arr1 = $("#workDay li");
+                var lengthOptions = $("#workDay li").length;
+                var lengthVegetable = $("#accompVegetable p").length;
+                var i: number = 0;
+                var vgt: number = 0;
+                do {
+                        Math.floor(Math.random() * lengthOptions)
                         var $randomList = $("#workDay li").eq(Math.floor(Math.random() * lengthOptions));
-                        $("#result td").eq(i).text($randomList.text());
+                        var $randomVeg = $("#accompVegetable p").eq(Math.floor(Math.random() * lengthVegetable));
+                        
+                        $("#result td").eq(i).text($randomList.text() + " with " + $randomVeg.text());
                         i++;
+                        vgt++;
                     } while (i < 5);
                 },
                 1100); 
