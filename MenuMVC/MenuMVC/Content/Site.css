@@ -90,7 +90,7 @@
 
     p {
         font-size: 17px;
-        color: #006600;
+        color: #009900;
     }
 
     th {
@@ -117,7 +117,7 @@
     }
 
     #newChoise {
-        top: 30px;
+        top: 3px;
     }
 
     .alertMenu, .alertQuantity {
@@ -208,4 +208,9 @@ a {
 .navbar-collapse.collapse {
     position: relative;
     top: -10px;
+}
+
+.pCentral {
+text-align: center;
+font-size: 22px;
 }
